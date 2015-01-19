@@ -49,7 +49,7 @@ class SessionService
     public function getData()
     {
         if ($this->storage->isEmpty()) {
-            return false;
+            return [];
         }
 
         return $this->storage->read();
