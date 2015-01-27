@@ -1,21 +1,19 @@
 # Zf2SessionStorage
-A simple Zend Framework 2 method to store session data for your application
+A simple Zend Framework 2 method to store session data
 
-I needed a simple way to store Selected country so that I could customise my applications currency. 
-The user selects their country from a dropsown, and I save this data to my userData session variable.
+I needed a method to store currency so that I could customise my product pricing. 
+User clicks on referred currency and the currency is saved to the session variable.
 
-To use this is pretty simpple.
+Easy to use:
 
 To set the data:
 
 $testData = new SessionService();
-$testData->setData('country','USA');
-$testData->setData('schema','1');
-$testData->setData('other','49');
+$testData->setData('currency','USD');
 
-To get the value of a stored item:
+To get the value from a stored session:
 
-result = $testData->getDataValue('country'); //will return: 'USA'
+result = $testData->getDataValue('currency'); //will return: 'USD'
 
 To get a list of all items:
 
@@ -24,9 +22,7 @@ resultArray = $testData->getData();
 Will return:
 
 array[
-'country' => 'USA',
-'schema'  => '1',
-'other'   => '49'
+'country' => 'USA'
 ];
 
 
